@@ -1,0 +1,10 @@
+
+body
+
+    h1 How much would you like to transfer?
+
+    form(method='POST' action='http://mybank.com:3000/transfer')
+        input(type="hidden" name="_csrf" value='#{csrfToken}')
+        input(name='amount' value='1000000000')
+        input(type='submit')
+

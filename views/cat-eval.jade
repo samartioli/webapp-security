@@ -1,0 +1,14 @@
+doctype html
+html(ng-app='catApp')
+    head
+        script(src='https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js')
+        script(src='cat-eval.js')
+    body
+        h1 Eval-a-Cat
+        div(ng-controller="evalController")
+            ul
+                li(ng-repeat="(key, value) in cats") {{value.name}}
+            br
+            br
+            input(type='submit' value='eval' ng-click='evalCat(catName)')
+

@@ -1,0 +1,14 @@
+doctype html
+html(ng-app='safeApp')
+    head
+        script(src='https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js')
+        script(src='https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-sanitize.min.js')
+        script(src='safe.js')
+    body
+        h1 Safe Starting Point
+        div(ng-controller="safeController")
+            div(ng-repeat='userComment in userComments')
+                b {{userComment.name}}
+                | :
+                span(ng-bind-html='userComment.comment')
+            br

